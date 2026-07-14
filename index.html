@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>스네이크 게임</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>스네이크 게임</h1>
+
+    <div class="scoreboard">
+      <div>점수: <span id="score">0</span></div>
+      <div>최고 점수: <span id="highScore">0</span></div>
+    </div>
+
+    <div class="controls">
+      <label for="difficulty">난이도:
+        <select id="difficulty">
+          <option value="200">쉬움</option>
+          <option value="150" selected>보통</option>
+          <option value="100">어려움</option>
+          <option value="50">매우 어려움</option>
+        </select>
+      </label>
+      <button id="pauseBtn" disabled>일시정지</button>
+    </div>
+
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+      <div id="startOverlay" class="overlay">
+        <button id="startBtn">게임 시작</button>
+      </div>
+
+      <div id="gameOverOverlay" class="overlay hidden">
+        <p>게임 오버</p>
+        <p>최종 점수: <span id="finalScore">0</span></p>
+        <button id="restartBtn">다시 시작</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
